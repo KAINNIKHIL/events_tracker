@@ -1,0 +1,56 @@
+# ---------------------------------
+# Node & Dependencies
+# ---------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# ---------------------------------
+# Environment & Secrets
+# ---------------------------------
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# ---------------------------------
+# Build / Dist Outputs
+# ---------------------------------
+dist/
+build/
+coverage/
+
+# ---------------------------------
+# Editor / OS Junk
+# ---------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.log
+
+# ---------------------------------
+# TypeScript
+# ---------------------------------
+*.tsbuildinfo
+
+# ---------------------------------
+# Misc
+# ---------------------------------
+temp/
+tmp/
+*.bak
+*.old
+
+# ---------------------------------
+# Optional: if using uploads or local storage
+# ---------------------------------
+uploads/
+public/uploads/
+storage/
