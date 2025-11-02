@@ -45,7 +45,7 @@ export default function CreateEvent() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:4000/api/events", formData);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/events`, formData);
       toast.success(" Event Created Successfully!");
       console.log("Server Response:", res.data);
 

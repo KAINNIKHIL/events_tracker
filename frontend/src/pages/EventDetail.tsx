@@ -25,7 +25,7 @@ export default function EventDetail() {
   useEffect(() => {
     if (!id) return;
     axios
-      .get(`http://localhost:4000/api/events/${id}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/events/${id}`)
       .then((res) => setEvent(res.data))
       .catch(() => setError("Event not found"))
       .finally(() => setLoading(false));
@@ -35,7 +35,7 @@ export default function EventDetail() {
     if (!event) return;
     setJoining(true);
     try {
-      await axios.post(`http://localhost:4000/api/events/${event.id}/join`, {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/${event.id}/join`, {
         userId: "guest_user", // replace with real user later
       });
       toast.success(" You’ve joined the event!");

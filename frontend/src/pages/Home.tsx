@@ -28,7 +28,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/events")
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/events`)
       .then((res) => setEvents(res.data))
       .catch((err) => console.error("Error fetching events:", err));
   }, []);
@@ -44,7 +44,7 @@ export default function Home() {
   // Fetch events
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/events")
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/events`)
       .then((res) => setEvents(res.data))
       .catch((err) => console.error("Error fetching events:", err));
   }, []);
